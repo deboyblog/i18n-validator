@@ -3,7 +3,7 @@
     "variable": "test {varible} case",
     "deep":{
         "level": {
-            "test": "haha<br/>{abcd}haha"
+            "test": "haha<br/>{abcd}haha{v2}"
         },
         "array": [
             "1<p></p>",
