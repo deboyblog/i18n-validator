@@ -20,7 +20,7 @@ module.exports = function (target, source = 'zh-cn', format = 'json') {
 Target: ${target}
 Source: ${source}
 `));
-    log(chalk.green('Start to translate...'));
+    log(chalk.green('开始检测...'));
     const files = listFilesSync(target);
     let sourceFileContent = null
     const i18nFileMap = {}
@@ -59,6 +59,14 @@ Source: ${source}
             });
             langErrorMap[key] = langErrorMap[key] && langErrorMap[key].join(',')
         })
-        console.log(`${lang} 异常如下\n`, JSON.stringify(langErrorMap, null, 4))
+        if (Object.keys(langErrorMap).length > 0) {
+            console.log(`${lang} 异常如下`)
+            Object.keys(langErrorMap).forEach((k) => {
+                if (langErrorMap[k]) {
+                    console.log(k, ' 检查项：', langErrorMap[k])
+                }
+            })
+        }
+        console.log('\n')
     })
 };
