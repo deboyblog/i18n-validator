@@ -57,15 +57,16 @@ Source: ${source}
                     }
                 }
             });
-            langErrorMap[key] = langErrorMap[key] && langErrorMap[key].join(',')
         })
         if (Object.keys(langErrorMap).length > 0) {
-            console.log(`${lang} 异常如下`)
+            console.log(chalk.red(`${lang} 异常如下`))
             Object.keys(langErrorMap).forEach((k) => {
                 if (langErrorMap[k]) {
-                    console.log(k, ' 检查项：', langErrorMap[k])
+                    console.log(k, ' 检查项：', langErrorMap[k].join(','))
                 }
             })
+        } else {
+            console.log(chalk.green(`${lang} 没有异常！🎉`))
         }
         console.log('\n')
     })

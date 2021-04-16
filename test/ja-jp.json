@@ -1,0 +1,14 @@
+{
+    "html": "<p><span class=\"hl\">test</span>case<br />break line</p>",
+    "variable": "test {varible} case",
+    "deep":{
+        "level": {
+            "test": "haha<br/>{abcd}haha{v2}"
+        },
+        "array": [
+            "1<p></p>",
+            "2<span></span>",
+            "3<br/>"
+        ]
+    }
+}
