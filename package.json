@@ -1,0 +1,22 @@
+{
+  "name": "i18n-validator",
+  "version": "1.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/deboyblog/i18n-validator.git",
+  "author": "Deboy <55631825@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node ./bin/i18n-validator -t ./test -s zh-cn"
+  },
+  "bin": {
+    "i18n-validator": "./bin/i18n-validator.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "flat": "^5.0.2",
+    "fs": "^0.0.1-security",
+    "list-files-in-dir": "^0.1.5",
+    "path": "^0.12.7"
+  }
+}
