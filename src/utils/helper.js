@@ -1,6 +1,7 @@
 const checkList = [
     new RegExp(/(<[^>]+>)/gi),
     new RegExp(/({.*?})/gi)
+    new RegExp(/(^@:.*)/gi)
 ]
 exports.detect = (str) => {
     let result = []
